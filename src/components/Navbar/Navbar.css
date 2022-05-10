@@ -1,0 +1,14 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c2c2c2;
+    padding: 20px;
+}
+
+.container-buttons a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #000;
+}

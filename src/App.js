@@ -1,24 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import { Navbar } from './components/Navbar/Navbar'
+import { Footer } from './components/Footer/Footer'
+import { Titulo } from './components/Titulo/Titulo'
+import { Boton } from './components/Boton/Boton'
 
 function App() {
+
+  const bienvenidos = "Hola Mundo"
+  const nombre = "Pilar Figueroa"
+  const handleClick = () => console.log("Has dado click")
+  const styles = {
+    backgroundColor: "blue",
+    padding: "10px 20px",
+    border: "none",
+    color: "#fff",
+    borderRadius: "5px",
+    cursor: "pointer"
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* JSX */}
+      <Navbar />
+      <Titulo welcome={bienvenidos} name={nombre} />
+      <Boton handleClick={handleClick} texto="Dame Click!" styles={styles} />
+      {/* <Boton handleClick={handleClick} texto="Segundo boton"/> */}
+      <Footer />
+    </>
   );
 }
 
